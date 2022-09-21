@@ -1,0 +1,117 @@
+:root {
+	--form-width: 400px;
+	--form-vertical-gap-size: 20px;
+	--two-input-row-input-width: calc(
+		var(--form-width) - var(--form-vertical-gap-size)
+	);
+	--form-horizontal-gap-size: 12px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+html {
+	width: 100vw;
+	height: 100vh;
+}
+
+body {
+	flex-wrap: wrap;
+	width: var(--form-width);
+}
+
+header {
+	text-align: center;
+	width: var(--form-width);
+	font-size: 26px;
+	margin-bottom: var(--form-horizontal-gap-size);
+}
+
+form {
+	width: var(--form-width);
+}
+
+input {
+	height: 34px;
+	border-radius: 5px;
+	padding: 8px;
+}
+
+form div.two-input-row,
+form div.two-btn-row {
+	display: flex;
+	justify-content: stretch;
+	gap: var(--form-vertical-gap-size);
+}
+
+form input {
+	width: var(--form-width);
+	margin-bottom: var(--form-horizontal-gap-size);
+}
+
+form div.two-input-row input,
+form div.two-btn-row button
+ {
+	width: var(--two-input-row-input-width);
+}
+
+form div.check-box-row {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	margin-bottom: var(--form-horizontal-gap-size);
+}
+
+form div.check-box-row input {
+	width: 15px;
+	height: 15px;
+	margin: 0;
+}
+
+form div.check-box-row label {
+	white-space: nowrap;
+	margin-right: 50px;
+	font-weight: bold;
+}
+
+form div.check-box-row p {
+	margin: 0;
+	font-size: 12px;
+}
+
+form div.check-box-row p span#registerSpan {
+	background-color: #428BCA;
+	color: white;
+	padding: 1px 4px;
+	border-radius: 3px;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+form div.two-btn-row button {
+	height: 34px;
+	border-radius: 5px;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+}
+
+form div.two-btn-row button#registerBtn {
+	background-color: #428BCA;
+}
+
+form div.two-btn-row button#signInBtn {
+	background-color: #5CB85C;
+}
